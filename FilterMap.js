@@ -210,40 +210,118 @@
 
 
 
+// 5) Make an array of strings of the names saying whether or not they can go to The Matrix
+// function makeStrings(arr){
+//     // your code here
 
-function makeStrings(arr){
-    // your code here
-
-    const str  = arr.map((items) => {
-       if (items.age >= 18){
-        return `${items.name} you can go to matrix`
-       }else {
-        return `${items.name} your under age`
-       }
-    })
-    console.log(str)
-  }
+//     const str  = arr.map((items) => {
+//        if (items.age >= 18){
+//         return `${items.name} you can go to matrix`
+//        }else {
+//         return `${items.name} your under age`
+//        }
+//     })
+//     console.log(str)
+//   }
   
-  console.log(makeStrings([
-      {
-          name: "Angelina Jolie",
-          age: 80
-      },
-      {
-          name: "Eric Jones",
-          age: 2
-      },
-      {
-          name: "Paris Hilton",
-          age: 5
-      },
-      {
-          name: "Kayne West",
-          age: 16
-      },
-      {
-          name: "Bob Ziroll",
-          age: 100
-      }
-  ])); 
+//   console.log(makeStrings([
+//       {
+//           name: "Angelina Jolie",
+//           age: 80
+//       },
+//       {
+//           name: "Eric Jones",
+//           age: 2
+//       },
+//       {
+//           name: "Paris Hilton",
+//           age: 5
+//       },
+//       {
+//           name: "Kayne West",
+//           age: 16
+//       },
+//       {
+//           name: "Bob Ziroll",
+//           age: 100
+//       }
+//   ])); 
+
+
+// function readyToPutInTheDOM(arr){
+//     // your code here
+//     const str = arr.map((items) => {
+//         return `<h1> ${items.name} <h2> ${items.age}`
+//     })
+//     console.log(str)
+//   }
+//   const htmlArray = readyToPutInTheDOM([
+//       {
+//           name: "Angelina Jolie",
+//           age: 80
+//       },
+//       {
+//           name: "Eric Jones",
+//           age: 2
+//       },
+//       {
+//           name: "Paris Hilton",
+//           age: 5
+//       },
+//       {
+//           name: "Kayne West",
+//           age: 16
+//       },
+//       {
+//           name: "Bob Ziroll",
+//           age: 100
+//       }
+//   ]); 
+//   const nameArray = htmlArray.map(function (e){
+//     return e.name;
+//   })
+
+//   const agesArray = htmlArray.map(function(e){
+//     return e.age;
+//   })
+
+//   console.log(nameArray);
+//   console.log(agesArray);
+
+
+// Sum of every positive element
+// const input = [1, -4, 12, 0, -3, 29, -150];
+
+// const values  = input.filter (function (num){
+//         return num > 0
+//     })
+//     .reduce(function (acc,curValue){
+//          return acc + curValue;
+//         },0)
+
+//         console.log(values)
+
+// const myNums = [1,2,3,4,5,6,7,8,9];
+
+// const newNums = myNums.filter((num)=>{
+//     return num > 4
+// })
+
+// console.log(newNums)\
+
+
+
+// Get name initials
+// const input = "George Raymond Richard Martin";
+
+// const str = input.split(" ")
+// .map(function (word) {
+//     return word[0];
+// })
+
+// .join("");
+
+// console.log(str)
+
+
 
