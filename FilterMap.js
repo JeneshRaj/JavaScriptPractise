@@ -323,5 +323,55 @@
 
 // console.log(str)
 
+// Note : This code is working with a string of words and it is performing three operations on the string: splitting it, mapping the first letter of each word, and then joining them back together.
+// First, the split method is used to split the input string into an array of words using a space (" ") as the separator. Then, the map method is used to iterate through the array of words and create a new array by applying a function to each word. The function passed to the map method takes one argument, word, which is the current element being processed, and it returns the first letter of the word by using the bracket notation to access the first character of the string.
+// Finally, the join method is used to join all the elements of the new array of first letters back into a single string, with no separator.
+// The code is also written with Arrow function which are shorthand for writing function expressions that behave similarly to regular functions while being more concise.
 
 
+// const input = [
+//     {
+//       name: "John",
+//       age: 13,
+//     },
+//     {
+//       name: "Mark",
+//       age: 56,
+//     },
+//     {
+//       name: "Rachel",
+//       age: 45,
+//     },
+//     {
+//       name: "Nate",
+//       age: 67,
+//     },
+//     {
+//       name: "Jennifer",
+//       age: 65,
+//     },
+//   ];
+
+
+//   const obj = input.filter(function (items) {
+//     return items.age > 13  && items.age< 65
+//   })
+ 
+//   console.log(obj);
+
+// If the given input is a number, you should return the factorial of that number. The factorial of a natural number n is the product of the positive integers less than or equal to n. So, 2! = 2, 3! = 6, 4! = 24 and so on.
+// const input = 6 ;
+
+// const arr = new Array(input).fill(null);
+
+// const newArr = arr.map(function (acc , index){
+//     return index +1;
+// })
+// .reduce (function (acc, curVal){
+//     return acc * curVal;
+// })
+// console.log(newArr)
+// Note : This code is working with a number input, it creates an array of that length filled with null values and then performs two operations on that array: mapping each element to its index + 1, and then reducing the array to the product of all its elements.
+// First, new Array(input).fill(null) creates a new array with the length of input and fills it with null values. Then, the map method is used to iterate through the array and create a new array by applying a function to each element. The function passed to the map method takes two arguments, currentValue and index, and it returns the value of the index plus 1, effectively mapping each element to its index + 1.
+// Finally, the reduce method is used to iterate through the new array and calculate the product of all its elements. The function passed to the reduce method takes two arguments, accumulator and currentValue, and it multiplies the currentValue to the accumulator and returns the new value of the accumulator.
+// The code is also written with Arrow function which are shorthand for writing function expressions that behave similarly to regular functions while being more concise.
