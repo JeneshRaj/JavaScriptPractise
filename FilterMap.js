@@ -375,3 +375,27 @@
 // First, new Array(input).fill(null) creates a new array with the length of input and fills it with null values. Then, the map method is used to iterate through the array and create a new array by applying a function to each element. The function passed to the map method takes two arguments, currentValue and index, and it returns the value of the index plus 1, effectively mapping each element to its index + 1.
 // Finally, the reduce method is used to iterate through the new array and calculate the product of all its elements. The function passed to the reduce method takes two arguments, accumulator and currentValue, and it multiplies the currentValue to the accumulator and returns the new value of the accumulator.
 // The code is also written with Arrow function which are shorthand for writing function expressions that behave similarly to regular functions while being more concise.
+
+
+// Count the occurrences of distinct elements in the given 2D array. The given input is an array, the elements of which are arrays of strings. The result is an object whose property names are the values from the arrays and their value is the number of their occurrences.
+// const input = [
+//     ["a", "b", "c"],
+//     ["c", "d", "f"],
+//     ["d", "f", "g"],
+//   ];
+
+//   const count = input.flat()
+//                     .reduce ((acc , curVal) => {
+//                         if(acc[curVal]){
+//                             acc [curVal] += 1;
+//                         }else {
+//                             acc[curVal] = 1;
+//                         }
+//                         return acc;
+//                     },{});
+//                     console.log(count)
+// 
+// Note : First, the flat method is used to flatten the array of arrays into a single array of characters. Then, the reduce method is used to iterate through the flattened array and count the occurrences of each character. The function passed to the reduce method takes two arguments, accumulator and currentValue.
+
+// The function checks if the currentValue already exists in the accumulator object, if it does, it increments the value by 1 and if not, it assigns the value 1 to that key, effectively counting the occurrences of each character in the flattened array.
+// Finally, the function returns the accumulator object with the count of each character in the flattened array.
