@@ -399,3 +399,107 @@
 
 // The function checks if the currentValue already exists in the accumulator object, if it does, it increments the value by 1 and if not, it assigns the value 1 to that key, effectively counting the occurrences of each character in the flattened array.
 // Finally, the function returns the accumulator object with the count of each character in the flattened array.
+
+
+
+// You are given an array of objects representing a group of students, each with a name and an array of test scores. Your task is to use map, filter, and reduce to calculate the average test score for each student, and then return an array of objects containing only the students who have an average score above 90.
+// 
+// const students = [
+//     { name: "Alice", scores: [90, 85, 92] },
+//     { name: "Bob", scores: [75, 80, 85] },
+//     { name: "Charlie", scores: [90, 95, 85] },
+//     { name: "Jack", scores: [100, 100, 100] }
+//   ];
+
+//   const studentAverages = students.map(student =>{
+//     const sum = student.scores.reduce((acc,score) => acc + score)
+    
+//     return {
+//         name: student.name , average : sum / student.scores.length
+//     }
+//   })
+//   const highPerformers = studentAverages.filter (student => student.average > 90)
+//   console.log(highPerformers);
+
+
+//   Note : This code is working with an array of objects representing students and their test scores, it performs two operations: calculating the average test score for each student and then filtering the students with an average test score above 90.
+//   First, the map method is used to iterate through the array of students, and create a new array by applying a function to each student object. The function passed to the map method takes one argument, student, which is the current element being processed.  
+//   It calculates the sum of all the test scores using the reduce method on the scores array and then returns an object with the student's name and average test score which is the sum of scores divided by the number of scores. Then, the filter method is used to iterate through the array of student averages, and create a new array by applying a function to each student object.  
+//   The function passed to the filter method takes one argument, student, which is the current element being processed, and it returns a Boolean value that indicates whether the student's average test score is greater than 90 or not.
+
+
+
+// You are given an array of objects representing a collection of products, each with a name, price, and category. Your task is to use map, filter, and reduce to calculate the average price of products in each category, and then return an array of objects containing only the categories that have an average price above 50.
+// const products = [
+//     { name: "Product 1", price: 20, category: "Electronics" },
+//     { name: "Product 2", price: 30, category: "Clothes" },
+//     { name: "Product 3", price: 40, category: "Electronics" },
+//     { name: "Product 4", price: 50, category: "Clothes" },
+//     { name: "Product 5", price: 60, category: "Clothes" },
+//     { name: "Product 6", price: 70, category: "Electronics" },
+//     { name: "Product 7", price: 80, category: "Clothes" },
+//     { name: "Product 8", price: 90, category: "Electronics" },
+//   ];
+
+// const productByCategory = products.reduce((acc,product) => {
+//     const category = product.category;
+//     if(!acc[category]){
+//         acc[category] = [];
+//     }
+//     acc[category].push(product);
+//     return acc;
+// },{});
+
+// const avgPriceCategory = Object.keys(productByCategory).map(category => {
+//     const sum = productByCategory[category].reduce((acc,product)=> acc + product.price,0)
+//     return { category: category, average: sum / productByCategory[category].length};
+// });
+
+// const highPricedCategory = avgPriceCategory.filter(category => category.average >50)
+// console.log(highPricedCategory)
+
+// Note : This code is using JavaScript's reduce and map methods to process an array of products and group them by category, calculate the average price of each category, and then filter the categories that have an average price greater than 50.
+// It starts by using the reduce method on the array of products and an empty object as an initial accumulator. The callback function passed to reduce takes in two arguments: an accumulator object and the current product.
+// It assigns the product's category to a variable category, and checks if the accumulator object already contains a key for this category. If it doesn't, it creates a new key on the accumulator object with an empty array as its value. It then pushes the current product into the array of the corresponding category and returns the accumulator object.
+// In the end, productsByCategory will be an object where each key is a category name, and the value is an array of products that belong to that category.
+// Next, it uses Object.keys(productsByCategory) to extract the keys (category names) of the productsByCategory object and then map method to iterate over these keys and calculate the average price of products in each category. It calculates the sum of prices of all products in each category using reduce method and divides this sum with the number of products in that category.
+// Finally, it filters the categories that have an average price greater than 50 using filter method
+
+
+// You are given an array of objects representing a collection of employees, each with a name, salary, and department. Your task is to use map, filter, and reduce to calculate the average salary for each department and then return an array of objects containing only the departments that have an average salary above 65000.
+// const employees = [
+//     { name: "John", salary: 50000, department: "IT" },
+//     { name: "Jane", salary: 60000, department: "HR" },
+//     { name: "Bob", salary: 55000, department: "IT" },
+//     { name: "Sophie", salary: 75000, department: "HR" },
+//     { name: "Mike", salary: 65000, department: "IT" },
+//     { name: "Emily", salary: 80000, department: "HR" },
+//     { name: "David", salary: 70000, department: "IT" },
+//   ];
+
+
+//   const employeesByDepartment = employees.reduce((acc, employee)=> {
+//     const department = employee.department;
+//     if(!acc[department]){
+//         acc[department]= [];
+//     }
+
+// acc[department].push(employee);
+// return acc;
+//   },{})
+
+//   const avgSalaryDepartment = Object.keys(employeesByDepartment).map(department => {
+//     const sum = employeesByDepartment[department].reduce((acc, employee) => acc + employee.salary,0)
+//     return { department: department, average: sum / employeesByDepartment[department].length}
+//   })
+
+//   const highPaidDepartments = avgSalaryDepartment.filter(department => department.average > 65000)
+
+//   console.log(highPaidDepartments)
+
+//   Note : This code is working with an array of objects representing employees and their salaries and department. It performs three operations: creating a dictionary with department as the key and an array of employee objects as the value, calculating the average salary for each department, and filtering the departments with an average salary above a certain threshold.
+//   First, the reduce method is used to iterate through the array of employees, and create a dictionary object by applying a function to each employee object. The function passed to the reduce method takes two arguments, acc and employee, where acc is the accumulator object, initially set to an empty object, and employee is the current element being processed.  
+//   The function first gets the department from the current employee object, and if the department does not exist in the accumulator object, it creates an array for that department. Then it pushes the current employee object to the array for that department. Finally, it returns the accumulator object with the updated department and employee arrays.  
+//   The Object.keys method is then used to get all the departments from the accumulator object, then the map method is used to iterate through the departments and create a new array by applying a function to each department. The function passed to the map method takes one argument, department, which is the current element being processed.  
+//   It first calculates the sum of all the salary of employees in that department using the reduce method on the department array and then returns an object with the department name and average salary which is the sum of salary divided by the number of employees in that department.  
+//   Finally, the filter method is used to iterate through the array of department averages, and create a new array by applying a function to each department object. The function passed to the filter method takes one argument, department, which is the current element being processed, and it returns a Boolean value that indicates whether the department's average salary is greater than 65000 or not.
