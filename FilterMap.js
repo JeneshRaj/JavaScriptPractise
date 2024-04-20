@@ -166,3 +166,12 @@
 // }
 
 // stringItUp([2,3,4,5])
+
+// 3) Capitalize each of an array of names
+// function capitalizeNames (arr) {
+//     const myArr = arr.map((items) => {
+//         return items.toUpperCase()
+//     })
+//     console.log(myArr)
+// }
+// capitalizeNames(["jenesh","puja","ram", "jeebesh","shrinika"]);
